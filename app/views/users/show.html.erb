@@ -1,0 +1,8 @@
+<h2><%= @user.first_name %> <%= @user.last_name %></h2>
+<ul>
+  <li><%= @user.address %></li>
+  <li><%= @user.email %></li>
+  <li><%= @user.phone %></li>
+
+<p><%=link_to"Go Home", root_path %> <%=link_to"Add a Plane", new_plane_path %></p>
+</ul>
