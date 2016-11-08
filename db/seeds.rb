@@ -12,38 +12,43 @@ User.create! ([{
   first_name: "Francois",
   last_name: "Damiens",
   email: "Francoisdu69@gmail.com",
-  phone: "0989768543"
-
+  phone: "0989768543",
+  password: "1234heleboel"
   },
   {
       first_name: "Daniel",
   last_name: "Blake",
   email: "BigBlake@hotmail.au",
-  phone: "0129738563"
+  phone: "0129738563",
+  password: "1234heleboel"
   },
   {
       first_name: "Chris",
   last_name: "Janssen",
   email: "janssenboss@yandex.nl",
-  phone: "0988762533"
+  phone: "0988762533",
+  password: "1234heleboel"
   },
   {
     first_name: "Alex",
   last_name: "renaud",
   email: "A.renaud@gmail.ch",
-  phone: "0287763513"
+  phone: "0287763513",
+  password: "1234heleboel"
   },
   {
       first_name: "Louis",
   last_name: "Merlot",
   email: "MerlotBoy@gmail.fr",
-  phone: "0989722222"
+  phone: "0989722222",
+  password: "1234heleboel"
   },
   {
   first_name: "Vladimir",
   last_name: "Butin",
   email: "kingofthetaiga@yandex.ru",
-  phone: "0239754543"
+  phone: "0239754543",
+  password: "1234heleboel"
   }])
 
 Plane.destroy_all
