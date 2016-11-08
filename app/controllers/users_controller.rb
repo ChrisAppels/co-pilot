@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     user.save
-    redirect_to user_path
+    user_find = User.find_by email: "#{user.email}"
+    redirect_to user_path(user_find.id)
   end
 
   private
