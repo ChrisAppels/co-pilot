@@ -1,0 +1,12 @@
+<h1>HERE IS A LIST OF ALL PLANES!</h1>
+<ul>
+  <% @planes.each do |plane| %>
+    <li>
+   <h2><%= link_to plane.model, plane_path(plane)%></h2>
+   <h2><%=plane.description%></h2>
+   <%= cl_image_tag(plane.image) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new plane", new_plane_path, :class => "btn btn-default" %>
