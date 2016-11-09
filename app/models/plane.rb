@@ -1,6 +1,6 @@
 class Plane < ApplicationRecord
 
-  validates  presence: true
+  validates :description, :model, :photo, :user, :capacity, :price, presence: true
 
   has_many :bookings
   has_many :reviews

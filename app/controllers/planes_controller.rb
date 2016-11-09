@@ -11,6 +11,7 @@ before_action :find_plane, only: [:show]
 
   def create
     @plane = Plane.new(plane_params)
+    @plane.user = User.first #TODO current_user
     @plane.save
     raise
 
