@@ -1,4 +1,5 @@
 class PlanesController < ApplicationController
+before_action :authenticate_user!, except: [:index, :show]
 
 before_action :find_plane, only: [:show]
   def index
@@ -11,9 +12,8 @@ before_action :find_plane, only: [:show]
 
   def create
     @plane = Plane.new(plane_params)
-    @plane.user = User.first #TODO current_user
+    @plane.user = current_user
     @plane.save
-    raise
 
     redirect_to planes_path
 
