@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Booking.destroy_all
+Plane.destroy_all
+Review.destroy_all
 
 User.create! ([{
   first_name: "Francois",
@@ -51,7 +54,7 @@ User.create! ([{
   password: "1234heleboel"
   }])
 
-Plane.destroy_all
+
 
 Plane.create! ([{
 model: "Dassault Falcon 7X",
@@ -60,43 +63,43 @@ It was first presented to the public at the 2005 Paris Air Show. The Falcon 8X i
 aerodynamic refinements and an increase in fuel capacity.
 It is the only trijet in production, along with the Falcon 900, having an S-duct central engine.
 Range: 11,000km.",
-image: "http://cdn.airplane-pictures.net/images/uploaded-images/2012/1/27/181750.jpg",
+remote_photo_url: "http://res.cloudinary.com/merch-factory/image/upload/v1478624818/fh1pbuq3hvbzky8d0wt4.jpg",
 capacity: 12,
 price: 3000,
-user_id: 5
+user: User.all.sample
 },
 {
 model: "Diamond Aircraft DA 42-VI",
 description: "The Diamond DA42 Twin Star is a four seat, twin engine, propeller-driven airplane manufactured by Diamond Aircraft Industries.
 Its airframe is made largely of composite materials.
 Range: 1600km",
-image: "https://files.graphiq.com/1617/media/images/Diamond_DA42-VI_2334301.jpg",
+remote_photo_url: "https://files.graphiq.com/1617/media/images/Diamond_DA42-VI_2334301.jpg",
 capacity: 4,
 price: 100,
-user_id: 1
+user: User.all.sample
 },
 {
   model: "Pilatus PC-12",
 description: "The Pilatus PC-12 NG has gained a reputation for outstanding versatility,
 performance, reliability and operational flexibility. As such, it is one of the most popular turbine-powered business aircraft on the market today.
 Range:2800km.",
-image: "https://www.luxuryaircraftsolutions.com/wp-content/uploads/2015/06/Pilatus-PC-12-Exterior.jpeg",
+remote_photo_url: "https://www.luxuryaircraftsolutions.com/wp-content/uploads/2015/06/Pilatus-PC-12-Exterior.jpeg",
 capacity: 9,
 price: 700,
-user_id: 6
+user: User.all.sample
 },
 {
   model: "Dassault Mirage 2000",
 description: "Whenever you are late for a meeting, fly there with the Mirage at 2000 km/h.
 The Dassault Mirage 2000 is a French multirole, single-engine fourth-generation jet fighter manufactured by Dassault Aviation.
 Range: 1500km.",
-image: "http://www.airforce-technology.com/projects/mirage/images/mirage2000_8.jpg",
+remote_photo_uprl: "http://www.airforce-technology.com/projects/mirage/images/mirage2000_8.jpg",
 capacity: 1,
 price: 3000,
-user_id: 2
+user: User.all.sample
 }])
 
-Review.destroy_all
+
 
 Review.create! ([{
   content: "Crazy plane! Went from Paris to Milano in 20 minutes !",
@@ -130,7 +133,7 @@ Review.create! ([{
   plane_id: 4
  }])
 
-Booking.destroy_all
+
 
 Booking.create! ([{
   start_date: Date.new(2016,11,25),

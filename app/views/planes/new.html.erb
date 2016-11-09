@@ -1,0 +1,11 @@
+<%= simple_form_for(@plane) do |f| %>
+  <%= f.input :model %>
+  <%= f.input :description %>
+  <%= f.input :photo %>
+  <%= f.input :price %>
+  <%= f.input :capacity %>
+
+
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>
