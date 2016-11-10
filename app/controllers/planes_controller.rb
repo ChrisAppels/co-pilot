@@ -5,7 +5,7 @@ before_action :authenticate_user!, except: [:index, :show]
 before_action :find_plane, only: [:show]
   def index
   if params[:query] && params[:query].length>0
-    @planes = Plane.where('description iLIKE ?', "%#{params[:query]}%")
+    @planes = Plane.query(params[:query])
   else
     @planes = Plane.all
   end
