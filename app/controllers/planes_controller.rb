@@ -26,7 +26,7 @@ end
 
 
   def show
-
+    @booking = Booking.new
   end
 end
 
