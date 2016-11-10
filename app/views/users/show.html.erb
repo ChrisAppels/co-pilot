@@ -16,6 +16,17 @@
 </ul>
 <% end %>
 
+<center><h2>Your planes</h2></center>
+<% @planes.each do |plane| %>
+<% if plane.user_id == @user.id %>
+<ul class="list-group ">
+  <li class="list-group-item"><b>Model:</b><%=link_to "#{plane.model}", plane_path(plane) %></li>
+  <li class="list-group-item"><b>Description:</b> <%= plane.description %></li>
+  <li class="list-group-item"><b>Capacity:</b> <%= plane.capacity %></li>
+</ul>
+<% end %>
+<% end %>
+
 
 
 <p><%=link_to"Go Home", root_path %> <%=link_to"Add a Plane", new_plane_path %></p>
