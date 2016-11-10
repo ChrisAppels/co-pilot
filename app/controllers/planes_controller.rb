@@ -4,7 +4,9 @@ before_action :authenticate_user!, except: [:index, :show]
 
 before_action :find_plane, only: [:show]
   def index
-  if params[:query] && params[:query].length>0
+  if params[:query] == "planes"
+    return @planes = Plane.all
+  elsif params[:query] && params[:query].length>0
     @planes = Plane.query(params[:query])
   else
     @planes = Plane.all
