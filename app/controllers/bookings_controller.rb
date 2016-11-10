@@ -3,12 +3,15 @@ class BookingsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @plane = Plane.find(params[:id])
   end
 
   def new
     @booking = Booking.new
     @plane = Plane.find(params[:id])
+  end
+
+  def plane
+    Plane.where(id: booking.plane_id).first
   end
 
   def create

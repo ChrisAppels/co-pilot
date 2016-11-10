@@ -9,7 +9,7 @@ before_action :find_plane, only: [:show]
   else
     @planes = Plane.all
   end
-end
+  end
 
   def new
     @plane = Plane.new
@@ -21,8 +21,8 @@ end
     @plane.save
 
     redirect_to planes_path
-
   end
+
 
 
   def show
