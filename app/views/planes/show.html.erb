@@ -1,33 +1,29 @@
-<ul>
 
-    <li>
-      <h2> <%= @plane.model %> </h2>
-    </li>
-    <li>
-      <p>
-      <%= @plane.description %>
-      </p>
-    </li>
-    <li>
-      <%= cl_image_tag @plane.photo, height: 300, width: 400, crop: :fill %>
-    </li>
-</ul>
+<section id="plane-show">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="column-left">
+          <div class="imagery">
+            <%= cl_image_tag @plane.photo, height: 470, width: 470, crop: :fill %>
+          </div>
+          <h2>Book this plane</h2>
 
-
-<h2>Book this plane</h2>
-
-<%= form_for [@plane, @booking] do |f| %>
-
-  <div><%= f.label :start_date %><br />
-  <%= f.date_select :start_date %>
-
-  <div><%= f.label :end_date %><br />
-  <%= f.date_select :end_date %>
-
-  <div><%= f.submit "Book this plane" %></div>
-<% end %>
-</div>
-<%= link_to 'Go Home', root_path %>
-<br>
-
-
+          <%= form_for [@plane, @booking] do |f| %>
+          <%= f.label :start_date %>
+          <%= f.date_select :start_date %><br>
+          <%= f.label :end_date %>
+          <%= f.date_select :end_date %><br>
+          <%= f.submit "Book this plane", :class => 'btn btn-primary btn-large' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="column-right">
+          <h2> <%= @plane.model %> </h2>
+          <p> <%= @plane.description %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

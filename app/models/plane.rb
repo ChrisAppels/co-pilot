@@ -9,6 +9,10 @@ class Plane < ApplicationRecord
   has_many :available_days
   belongs_to :user
 
+  # geocoded_by :address
+  # after_validation :geocode, if: :address_changed?
+
+
    mount_uploader :photo, PhotoUploader
 end
 

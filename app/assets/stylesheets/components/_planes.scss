@@ -1,0 +1,37 @@
+
+/////////// PLANE SHOW PAGE ////////////
+#plane-show {}
+
+#plane-show .column-left {
+  margin-top: 40px;
+}
+
+#plane-show .column-left h2 {
+margin-top: 25px;
+margin-bottom: 0px;
+font-size: 35px;
+font: bold;
+}
+#plane-show .column-left label {
+margin-top: 25px;
+margin-bottom: 15px;
+}
+#plane-show .column-left .btn {
+margin-top: 15px;
+}
+
+#plane-show .column-left img {
+  -webkit-box-shadow: 20px 20px 50px -13px rgba(84,84,87,1);
+  -moz-box-shadow: 20px 20px 50px -13px rgba(84,84,87,1);
+  box-shadow: 20px 20px 50px -13px rgba(84,84,87,1);
+}
+
+#plane-show .column-right h2 {
+  margin-top: 40px;
+  font-size: 48px;
+}
+
+#plane-show .column-right p {
+    font-size: 20px;
+    font-style: oblique;
+}
