@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_filter :find_user, only: [:show]
 
   def show
+    @bookings = Booking.all.where(user_id: params[:id])
+    @planes = Plane.all
   end
 
   def new

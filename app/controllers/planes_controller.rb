@@ -4,12 +4,14 @@ before_action :authenticate_user!, except: [:index, :show]
 
 before_action :find_plane, only: [:show]
   def index
-  if params[:query] && params[:query].length>0
-    @planes = Plane.where('description iLIKE ?', "%#{params[:query]}%")
+  if params[:query] == "planes"
+    return @planes = Plane.all
+  elsif params[:query] && params[:query].length>0
+    @planes = Plane.query(params[:query])
   else
     @planes = Plane.all
   end
-end
+  end
 
   def new
     @plane = Plane.new
@@ -21,12 +23,12 @@ end
     @plane.save
 
     redirect_to planes_path
-
   end
 
 
-  def show
 
+  def show
+    @booking = Booking.new
   end
 end
 

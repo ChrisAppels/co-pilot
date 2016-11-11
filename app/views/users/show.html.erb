@@ -3,8 +3,30 @@
 <ul class="list-group ">
   <li class="list-group-item"><b>Addres:</b> <%= @user.address %></li>
   <li class="list-group-item"><b>Email:</b> <%= @user.email %></li>
-  <li class="list-group-item"><b>Phone</b> number: <%= @user.phone %></li>
+  <li class="list-group-item"><b>Phone number:</b> <%= @user.phone %></li>
 </ul>
+
+
+<center><h2>Bookings</h2></center>
+<% @bookings.each do |booking| %>
+<ul class="list-group ">
+  <li class="list-group-item"><b>Start date:</b> <%= booking.start_date %></li>
+  <li class="list-group-item"><b>End date:</b> <%= booking.end_date %></li>
+  <li class="list-group-item"><b>Plane:</b> <%= booking.plane.model %></li>
+</ul>
+<% end %>
+
+<center><h2>Your planes</h2></center>
+<% @planes.each do |plane| %>
+<% if plane.user_id == @user.id %>
+<ul class="list-group ">
+  <li class="list-group-item"><b>Model:</b><%=link_to "#{plane.model}", plane_path(plane) %></li>
+  <li class="list-group-item"><b>Description:</b> <%= plane.description %></li>
+  <li class="list-group-item"><b>Capacity:</b> <%= plane.capacity %></li>
+</ul>
+<% end %>
+<% end %>
+
 
 
 <p><%=link_to"Go Home", root_path %> <%=link_to"Add a Plane", new_plane_path %></p>

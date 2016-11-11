@@ -1,5 +1,3 @@
-
-
 <ul>
 
     <li>
@@ -14,4 +12,22 @@
       <%= cl_image_tag @plane.photo, height: 300, width: 400, crop: :fill %>
     </li>
 </ul>
+
+
+<h2>Book this plane</h2>
+
+<%= form_for [@plane, @booking] do |f| %>
+
+  <div><%= f.label :start_date %><br />
+  <%= f.date_select :start_date %>
+
+  <div><%= f.label :end_date %><br />
+  <%= f.date_select :end_date %>
+
+  <div><%= f.submit "Book this plane" %></div>
+<% end %>
+</div>
+<%= link_to 'Go Home', root_path %>
+<br>
+
 

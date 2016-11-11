@@ -1,12 +1,4 @@
-<!--
-<div class="banner">
-      <div class="banner-content">
-        <h1>Welcome to your personal plane </h1>
-        <p>Rent planes and their pilotes to travel even faster and safer to your destination</p>
-        <a class="btn btn-primary btn-lg">How it works</a>
-      </div>
-    </div>
- -->
+
 <div class="homepage-hero-module">
     <div class="video-container">
         <div class="filter"></div>
@@ -73,19 +65,14 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
 <br>
 <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 <br>
 <%= link_to 'Sign in', user_session_path %>
 <br>
 <%= link_to 'Sign up', new_user_registration_path %>
+<br>
+<br>
+<%= link_to 'view all available planes', planes_path %>
 <br>
 
