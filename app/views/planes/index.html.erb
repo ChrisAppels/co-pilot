@@ -5,14 +5,17 @@
 
 
 
-<ul>
+
+<div class="container">
+  <div class="row">
   <% @planes.each do |plane| %>
-    <li>
-   <h2><%= link_to plane.model, plane_path(plane)%></h2>
-   <h2><%=plane.description%></h2>
-   <%= cl_image_tag(plane.photo) %>
-    </li>
+   <%= render partial: "plane_card", locals: {plane: plane} %>
   <% end %>
-</ul>
+   </div>
+</div>
+
+
 
 <%= link_to "Add a new plane", new_plane_path, :class => "btn btn-default" %>
+
+
