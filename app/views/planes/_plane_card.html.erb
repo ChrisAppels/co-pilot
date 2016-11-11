@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
+
+
+<div class="col-xs-12 col-sm-4">
+  <a href="#">
+    <div class="card plane-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%=plane.photo.to_s%>);">
+      <h2><%= plane.model %></h2>
+      <div class="card-description">
+        <div class="first"><%= plane.description%></div>
+        <div class="last">... read more</div>
+      </div>
+      <% %>
     </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-  </div>
+  </a>
 </div>
+
