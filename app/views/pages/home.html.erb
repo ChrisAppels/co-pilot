@@ -1,6 +1,70 @@
-<h1>Welcome to Co-Pilot</h1>
-<p>Here you can view and book planes
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <source src="/assets/In-The-Clouds.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="/assets/In-The-Clouds.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="/assets/In-The-Clouds.jpg" alt="">
+        </div>
+        <div class="title-container">
+          <h1>Welcome aboard</h1>
+          <h3>Rent planes and their pilotes to travel faster and safer to your destination</h3>
+          <a class="btn btn-primary btn-large" href="#">Your planes</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="head-planes">
+  <h2>What will be your ride today ?</h2>
+
+  <p>See the planes at your disposal.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+  <img class="card-user avatar" src="user.jpg">
+  <a class="card-link" href="#" ></a>
+</div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+  <img class="card-user avatar" src="user.jpg">
+  <a class="card-link" href="#" ></a>
+</div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+  <img class="card-user avatar" src="user.jpg">
+  <a class="card-link" href="#" ></a>
+</div>
+
+    </div>
+  </div>
+</div>
+
 <br>
 <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 <br>
