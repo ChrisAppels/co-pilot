@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   def show
     @bookings = Booking.all.where(user_id: params[:id])
     @planes = Plane.all
-    # @plane = Plane.where(id: @booking.plane_id).first
   end
 
   def new
